@@ -1,115 +1,156 @@
 import Image from "next/image";
-import localFont from "next/font/local";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Link from "next/link";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [tab, setTab] = useState("one-id");
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const selectTab = (tab) => {
+    setTab(tab);
+  };
+  return (
+    <div className="flex">
+      <div className="w-2/5 min-h-screen flex items-center justify-center">
+        <div className="p-[20px] max-w-[426px]">
+          <h6 className="font-medium text-[24px] mb-[4px] text-center">
+            Platformaga kirish
+          </h6>
+          <p className="text-[#393C4E] font-normal mb-[35px] flex justify-center items-center">
+            Loyiha-smeta hujjatlarini ekspertizadan o‘tkazish axborot tizimiga
+            xush kelibsiz
+          </p>
+
+          <div className="flex gap-x-[12px] justify-center items-center rounded-sm mb-[35px]">
+            <button
+              onClick={() => selectTab("one-id")}
+              className={`${
+                tab === "one-id"
+                  ? "border-[#01565B] text-black"
+                  : "border-[#F0F0F0] text-[#595959]"
+              } border  text-center py-[8px] w-[134px] rounded-[4px]`}
+            >
+              One ID
+            </button>
+
+            <button
+              onClick={() => selectTab("mobile-id")}
+              className={`${
+                tab === "mobile-id"
+                  ? "border-[#01565B] text-black"
+                  : "border-[#F0F0F0] text-[#595959]"
+              } border  text-center py-[8px] w-[134px] rounded-[4px]`}
+            >
+              Mobile-ID
+            </button>
+
+            <button
+              onClick={() => selectTab("eri")}
+              className={`${
+                tab === "eri"
+                  ? "border-[#01565B] text-black"
+                  : "border-[#F0F0F0] text-[#595959]"
+              } border  text-center py-[8px] w-[134px] rounded-[4px]`}
+            >
+              ERI
+            </button>
+          </div>
+
+          {tab === "one-id" && (
+            <motion.form
+              initial={{ opacity: 0, translateY: "100px" }}
+              animate={{ opacity: 1, translateY: "0px" }}
+              className=""
+            >
+              <div>
+                <label>Login</label>
+                <input
+                  type="text"
+                  placeholder="Loginni kiriting"
+                  className="px-[12px] py-[10px] w-full border border-[#F0F0F0] rounded-[6px] mt-[4px] mb-[16px]"
+                />
+              </div>
+
+              <div>
+                <label>Parol</label>
+                <div>
+                  <input
+                    type="password"
+                    placeholder="Parolni kiriting"
+                    className="px-[12px] py-[10px] w-full border border-[#F0F0F0] rounded-[6px] mt-[4px] mb-[35px]"
+                  />
+                  <Image
+                    src={"/images/eye.png"}
+                    alt="eye"
+                    width={18}
+                    height={18}
+                  />
+                </div>
+              </div>
+
+              <button className="bg-[#01565B] hover:bg-[#013D41] active:bg-[#002426] text-white w-full py-[10px] rounded-[8px] mb-[16px] transition-all duration-300">
+                Kirish
+              </button>
+
+              <Link
+                href={"#"}
+                className="text-[#8C8C8C] flex items-center justify-center "
+              >
+                Login yoki parolni unutdingizmi?
+              </Link>
+            </motion.form>
+          )}
+          {tab == "mobile-id" && (
+            <motion.form
+              initial={{ opacity: 0, translateY: "100px" }}
+              animate={{ opacity: 1, translateY: "0px" }}
+            >
+              <div>
+                <label>Telefon raqam</label>
+                <input
+                  type="text"
+                  placeholder="Telefon raqamni kiriting"
+                  className="px-[12px] py-[10px] w-full border text-black border-[#F0F0F0] rounded-[6px] mt-[4px] mb-[35px]"
+                />
+              </div>
+              <p className="text-[#595959] text-sm mb-[16px]">
+                Tizimga kirish uchun Mobile-ID xizmati telefon raqamingizga
+                ulangan bo‘lishi kerak.
+              </p>
+
+              <button className="bg-[#01565B] hover:bg-[#013D41] active:bg-[#002426] text-white w-full py-[10px] rounded-[8px] mb-[16px] transition-all duration-300">
+                SMS kodni olish
+              </button>
+            </motion.form>
+          )}
+
+          {tab === "eri" && (
+            <motion.form
+              initial={{ opacity: 0, translateY: "100px" }}
+              animate={{ opacity: 1, translateY: "0px" }}
+            >
+              {" "}
+              <div>
+                <label>ERI kaliti</label>
+                <input
+                  type="text"
+                  placeholder="ERI kalitini tanlang"
+                  className="px-[12px] py-[10px] w-full border text-black border-[#F0F0F0] rounded-[6px] mt-[4px] mb-[35px]"
+                />
+              </div>
+              <button className="bg-[#01565B] hover:bg-[#013D41] active:bg-[#002426] text-white w-full py-[10px] rounded-[8px] mb-[16px] transition-all duration-300">
+                Kirish
+              </button>
+            </motion.form>
+          )}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <div
+        className="w-3/5 h-screen bg-no-repeat p-[12px] bg-cover"
+        style={{ backgroundImage: "url(/images/bg-auth.png)" }}
+      >
+        Hello
+      </div>
     </div>
   );
 }
