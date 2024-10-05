@@ -12,34 +12,40 @@ const sideBarMenuData = [
     id: 1,
     title: "Murojaatlar",
     url: "/dashboard",
+    quantity: 100,
   },
   {
     id: 2,
     title: "Mening hisoblarim",
     url: "/dashboard",
+    quantity: 10,
   },
 
   {
     id: 3,
     title: "Billing",
     url: "/dashboard",
+    quantity: 3,
   },
 
   {
     id: 4,
     title: "Mening xatlarim",
     url: "/dashboard",
+    quantity: 56,
   },
 
   {
     id: 5,
     title: "Eʼlonlar",
     url: "/dashboard",
+    quantity: 32,
   },
   {
     id: 6,
     title: "Bilimlar bazasi",
     url: "/dashboard",
+    quantity: 0,
   },
 ];
 
@@ -65,15 +71,15 @@ const Sidebar = () => {
         {sideBarMenuData.map((item) => (
           <li
             key={get(item, "id")}
-            className="flex w-full rounded-sm"
+            className={clsx("flex w-full items-center rounded-sm p-[8px] ", {
+              "bg-[#E6EEEF] text-[#01565B]": selectedId === get(item, "id"),
+              "bg-transparent text-black": selectedId !== get(item, "id"),
+            })}
             onClick={() => setSelectedId(get(item, "id"))}
           >
             <Link
               href={"#"}
-              className={clsx("p-[8px] flex gap-x-[10px] rounded-sm w-full", {
-                "bg-[#E6EEEF] text-[#01565B]": selectedId === get(item, "id"),
-                "bg-transparent text-black": selectedId !== get(item, "id"),
-              })}
+              className={clsx("flex gap-x-[10px] rounded-sm w-full")}
             >
               <Image
                 src={
@@ -87,6 +93,18 @@ const Sidebar = () => {
               />
               <p>{get(item, "title")}</p>
             </Link>
+
+            <p
+              className={clsx(
+                "text-xs  py-[4px] px-[4px] max-w-[32px] rounded-[6px] w-full text-center",
+                {
+                  "bg-[#B0CBCC] text-[#01565B]": selectedId === get(item, "id"),
+                  "bg-[#01565B] text-white": selectedId !== get(item, "id"),
+                }
+              )}
+            >
+              {get(item, "quantity")}
+            </p>
           </li>
         ))}
       </ul>
