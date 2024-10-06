@@ -116,7 +116,7 @@ const Sidebar = () => {
         >
           <div className="flex text-start gap-x-[8px]">
             <Image
-              src={"/images/avatar.png"}
+              src={"/icons/avatar.svg"}
               alt="logo"
               width={48}
               height={48}
