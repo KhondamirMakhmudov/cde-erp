@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import Header from "@/components/header/header";
+import Header from "@/layouts/dashboard/components/header";
 import { motion } from "framer-motion";
-import Sidebar from "@/components/sidebar";
+import Sidebar from "@/layouts/dashboard/components/sidebar";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
