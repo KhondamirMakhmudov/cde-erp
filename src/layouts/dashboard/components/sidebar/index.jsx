@@ -49,14 +49,17 @@ const sideBarMenuData = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ openSideBar, setOpenSideBar }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [open, setOpen] = useState(false);
 
   const toggleProfile = () => setOpen(!open);
   return (
     <div className="w-[270px] flex flex-col !bg-white border border-[#F5F5F5] rounded-xl p-[8px]">
-      <Image src={"/images/Logo.png"} alt="logo" width={103} height={42} />
+      <div className="flex items-center justify-between">
+        <Image src={"/images/Logo.png"} alt="logo" width={103} height={42} />
+        <Image src={"/images/left.png"} alt="left" width={24} height={24} />
+      </div>
 
       <SearchBar />
 
@@ -71,7 +74,7 @@ const Sidebar = () => {
         {sideBarMenuData.map((item) => (
           <li
             key={get(item, "id")}
-            className={clsx("flex w-full items-center rounded-sm p-[8px] ", {
+            className={clsx("flex w-full rounded-lg items-center  p-[8px] ", {
               "bg-[#E6EEEF] text-[#01565B]": selectedId === get(item, "id"),
               "bg-transparent text-black": selectedId !== get(item, "id"),
             })}
