@@ -8,10 +8,7 @@ const StepInNumbers = ({ firstStep, secondStep, thirdStep, fourthStep }) => {
         <li className="py-[4px] px-[12px]">
           <div>
             <div className="flex gap-x-[12px] mb-[10px]">
-              <p className="font-semibold text-base text-white px-[14px]  py-[5px] bg-[#015357] rounded-full">
-                1
-              </p>
-
+              {firstStep}
               <StepDivider />
             </div>
 
@@ -22,9 +19,7 @@ const StepInNumbers = ({ firstStep, secondStep, thirdStep, fourthStep }) => {
         <li className="py-[4px] px-[12px]">
           <div>
             <div className="flex gap-x-[12px] mb-[10px]">
-              <p className="font-semibold text-base text-white px-[13px]  py-[5px] bg-[#015357] rounded-full">
-                2
-              </p>
+              {secondStep}
 
               <StepDivider />
             </div>
@@ -35,9 +30,7 @@ const StepInNumbers = ({ firstStep, secondStep, thirdStep, fourthStep }) => {
         <li className="py-[4px] px-[12px]">
           <div>
             <div className="flex gap-x-[12px] mb-[10px]">
-              <p className="font-semibold text-base text-white px-[13px]  py-[5px] bg-[#015357] rounded-full">
-                3
-              </p>
+              {thirdStep}
 
               <StepDivider />
             </div>
@@ -48,9 +41,7 @@ const StepInNumbers = ({ firstStep, secondStep, thirdStep, fourthStep }) => {
         <li className="py-[4px] px-[12px]">
           <div>
             <div className="flex gap-x-[12px] mb-[10px]">
-              <p className="font-semibold text-base text-white px-[13px]  py-[5px] bg-[#015357] rounded-full">
-                4
-              </p>
+              {fourthStep}
 
               <StepDivider />
             </div>
