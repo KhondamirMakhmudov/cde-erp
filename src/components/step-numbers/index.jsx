@@ -1,7 +1,7 @@
 import React from "react";
 import StepDivider from "../step-divider";
 
-const StepInNumbers = () => {
+const StepInNumbers = ({ firstStep, secondStep, thirdStep, fourthStep }) => {
   return (
     <div>
       <ul className="flex items-center mt-[12px]">
