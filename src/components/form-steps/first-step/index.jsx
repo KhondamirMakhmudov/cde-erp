@@ -4,11 +4,11 @@ import Image from "next/image";
 import Header from "@/layouts/dashboard/components/header";
 import { motion } from "framer-motion";
 import Sidebar from "@/layouts/dashboard/components/sidebar";
-import StepInNumbers from "@/components/step-numbers";
 
-const Index = () => {
+const Index = ({ options, initialOption, initialSection }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedOption, setSelectedOption] = useState(initialOption);
+  const [selectSection, setSelectSection] = useState(initialSection);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -17,25 +17,13 @@ const Index = () => {
     setIsOpen(false);
   };
 
-  const [selectSection, setSelectSection] = useState("davlat-tashkiloti");
-
-  const options = ["Option 1", "Option 2", "Option 3"];
+  //   const options = ["Option 1", "Option 2", "Option 3"];
 
   return (
     <div className="flex bg-[#FCFCFC] gap-x-[12px] p-[12px] min-h-screen">
-      <Sidebar />
-
       <main className="w-full">
-        <Header />
-
-        <StepInNumbers />
         <section className={""}>
-          <div className=" w-4/5 grid grid-cols-12 gap-x-[16px] bg-white py-[12px] px-[16px] rounded-xl border border-[#F5F5F5] mt-[12px]">
-            <div className="fixed bottom-8 bg-white w-4/5 p-[16px] rounded-[12px]">
-              <button className="text-sm text-white bg-[#015357] hover:bg-[#017177] active:bg-[#02878E] float-right py-[12px] px-[66px] rounded-[8px]">
-                Davom etish
-              </button>
-            </div>
+          <div className="grid grid-cols-12 gap-x-[16px] bg-white py-[12px] px-[16px] rounded-xl border border-[#F5F5F5] mt-[12px]">
             <div
               onClick={() => setSelectSection("davlat-tashkiloti")}
               className={`col-span-4 bg-[#FCFCFC]  flex flex-col py-[38px] justify-center items-center border ${

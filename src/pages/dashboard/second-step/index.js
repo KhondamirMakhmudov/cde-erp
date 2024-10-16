@@ -10,14 +10,14 @@ const Index = () => {
           <div className="col-span-12 grid grid-cols-12 gap-x-[12px] mt-[16px] mb-[12px]">
             <div className={"col-span-4"}>
               <label className={"text-black "}>Qurilish turi*</label>
-              <select class=" w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
+              <select className=" w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
                 <option value="1">Yangi qurilish</option>
               </select>
             </div>
 
             <div className={"col-span-4"}>
               <label className={"text-black"}>Soxa*</label>
-              <select class=" w-full py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2  mt-[4px]">
+              <select className=" w-full py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2  mt-[4px]">
                 <option value="1">Yangi qurilish</option>
               </select>
             </div>
@@ -35,7 +35,7 @@ const Index = () => {
           <div className="col-span-12 grid grid-cols-12 gap-x-[12px] mt-[16px] mb-[12px]">
             <div className={"col-span-4"}>
               <label className={"text-black"}>Buyurtmachi turi*</label>
-              <select class=" w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
+              <select className=" w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
                 <option value="1">Yangi qurilish</option>
               </select>
             </div>
@@ -51,7 +51,7 @@ const Index = () => {
 
             <div className={"col-span-4"}>
               <label className={"text-black"}>Obyekt toifasi*</label>
-              <select class=" w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
+              <select className=" w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
                 <option value="1">Obʼekt toifasini tanlang</option>
               </select>
             </div>
@@ -81,7 +81,7 @@ const Index = () => {
 
             <div className={"col-span-4"}>
               <label className={"text-black"}>Moliyalashtirish manbai*</label>
-              <select class=" w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
+              <select className=" w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
                 <option value="1">Yangi qurilish</option>
               </select>
             </div>
@@ -90,7 +90,7 @@ const Index = () => {
           <div className="col-span-12 grid grid-cols-12 gap-x-[12px] mt-[16px] ">
             <div className={"col-span-10"}>
               <label className={"text-black "}>Ish hajmi*</label>
-              <select class="appearance-none w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
+              <select className="appearance-none w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
                 <option value="1">
                   Loyiha-smeta hujjatlarining smeta qiymati (so‘m)
                 </option>
@@ -121,14 +121,14 @@ const Index = () => {
           <div className="col-span-12 grid grid-cols-12 gap-x-[12px] mt-[16px] mb-[12px]">
             <div className={"col-span-4"}>
               <label className={"text-black "}>Viloyat*</label>
-              <select class=" w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
+              <select className=" w-full cursor-pointer py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2 mt-[4px]">
                 <option value="1">Viloyatni tanlang</option>
               </select>
             </div>
 
             <div className={"col-span-4"}>
               <label className={"text-black"}>Tuman*</label>
-              <select class=" w-full py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2  mt-[4px]">
+              <select className=" w-full py-[10px] px-[12px] border  rounded-[6px] focus:outline-none focus:ring-2  mt-[4px]">
                 <option value="1">Tumanni tanlang</option>
               </select>
             </div>
@@ -149,9 +149,9 @@ const Index = () => {
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11984.008160154168!2d69.25198194999999!3d41.330569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1728280207464!5m2!1sru!2s"
               width="100%"
               height="450"
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
