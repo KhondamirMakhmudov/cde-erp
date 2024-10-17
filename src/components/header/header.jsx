@@ -2,12 +2,12 @@ import Head from "next/head";
 import React from "react";
 import Image from "next/image";
 
-const Header = () => {
+const Header = ({ headerTitle }) => {
   return (
     <div className="flex justify-between items-center bg-white border border-[#F5F5F5] py-[12px] px-[16px] rounded-lg">
       <div className="flex items-center gap-x-[8px]">
         <Image src={"/images/left.png"} alt="left" width={24} height={24} />
-        <h2 className="font-medium text-[24px]">Murojaat yuborish</h2>
+        <h2 className="font-medium text-[24px]">{headerTitle}</h2>
       </div>
 
       <div className="flex gap-x-[11px]">

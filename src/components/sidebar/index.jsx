@@ -11,7 +11,7 @@ const sideBarMenuData = [
   {
     id: 1,
     title: "Murojaatlar",
-    url: "/dashboard",
+    url: "/appeals",
     quantity: 100,
   },
   {

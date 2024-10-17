@@ -11,7 +11,7 @@ const sideBarMenuData = [
   {
     id: 1,
     title: "Murojaatlar",
-    url: "/dashboard",
+    url: "/appeals",
     quantity: 100,
   },
   {
@@ -24,27 +24,27 @@ const sideBarMenuData = [
   {
     id: 3,
     title: "Billing",
-    url: "/dashboard",
+    url: "/billing",
     quantity: 3,
   },
 
   {
     id: 4,
     title: "Mening xatlarim",
-    url: "/dashboard",
+    url: "/my-messages",
     quantity: 56,
   },
 
   {
     id: 5,
     title: "Eʼlonlar",
-    url: "/dashboard",
+    url: "/announcements",
     quantity: 32,
   },
   {
     id: 6,
     title: "Bilimlar bazasi",
-    url: "/dashboard",
+    url: "/databases",
     quantity: 0,
   },
 ];
@@ -81,7 +81,7 @@ const Sidebar = ({ openSideBar, setOpenSideBar }) => {
             onClick={() => setSelectedId(get(item, "id"))}
           >
             <Link
-              href={"#"}
+              href={get(item, "url")}
               className={clsx("flex gap-x-[10px] rounded-sm w-full")}
             >
               <Image
