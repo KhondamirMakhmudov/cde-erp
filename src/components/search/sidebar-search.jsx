@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 // You can use heroicons for the search icon
 
-const SearchBar = () => {
+const SearchBar = ({ searchPlaceholder = "Qidiruv..." }) => {
   return (
     <div className="flex items-center bg-[#FCFCFC] border border-[#F5F5F5] rounded-lg p-[8px] mt-[12px] mb-[8px]">
       {/* Search Icon */}
@@ -10,8 +10,8 @@ const SearchBar = () => {
       {/* Input Field */}
       <input
         type="text"
-        placeholder="Qidiruv..."
-        className="bg-transparent focus:outline-none text-[#D9D9D9] max-w-[176px] placeholder:text-[#D9D9D9]  ml-[3px] mr-[6px]"
+        placeholder={searchPlaceholder}
+        className="bg-transparent focus:outline-none text-[#D9D9D9] w-full placeholder:text-[#D9D9D9]  ml-[3px] mr-[6px]"
       />
 
       {/* Command Icon and Number */}
