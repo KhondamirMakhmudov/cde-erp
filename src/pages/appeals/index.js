@@ -114,7 +114,7 @@ const Index = () => {
               <div className="py-[8px]">
                 <h2 className="text-[24px] font-medium mb-[4px]">Yanvar</h2>
                 <p className="text-sm text-[#8C8C8C]">
-                  Oylar bo'yicha murojaatlar kelishi miqdori
+                  Oylar bo&apos;yicha murojaatlar kelishi miqdori
                 </p>
               </div>
 
