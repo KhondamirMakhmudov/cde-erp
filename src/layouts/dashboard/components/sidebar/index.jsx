@@ -17,7 +17,7 @@ const sideBarMenuData = [
   {
     id: 2,
     title: "Mening hisoblarim",
-    url: "/dashboard",
+    url: "/notes",
     quantity: 10,
   },
 

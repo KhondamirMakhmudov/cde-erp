@@ -112,9 +112,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <button className="bg-[#01565B] hover:bg-[#013D41] active:bg-[#002426] text-white w-full py-[10px] rounded-[8px] mb-[16px] transition-all duration-300">
-                Kirish
-              </button>
+              <Link href={"/dashboard"}>
+                <button className="bg-[#01565B] hover:bg-[#013D41] active:bg-[#002426] text-white w-full py-[10px] rounded-[8px] mb-[16px] transition-all duration-300">
+                  Kirish
+                </button>
+              </Link>
 
               <Link
                 href={"#"}

@@ -7,6 +7,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+import { useRouter } from "next/router";
 
 const Index = () => {
   const appealsData = [0, 3, 4, 6, 2, 1, 0, 5, 7];
@@ -23,6 +24,7 @@ const Index = () => {
           <ul className="py-[12px] space-y-[16px]">
             <li>
               <AppealCard
+                url={`/appeals/221627`}
                 numberOfAppeal={"221627"}
                 status={"Yangi"}
                 title={
@@ -34,7 +36,8 @@ const Index = () => {
 
             <li>
               <AppealCard
-                numberOfAppeal={"221627"}
+                url={`/appeals/221626`}
+                numberOfAppeal={"221626"}
                 status={"Yangi"}
                 title={
                   "Fargona viloyat Uzbekiston tumani 15-sonli umumiy urta taʼlim maktabi binosini joriy tamirlash"
@@ -45,7 +48,8 @@ const Index = () => {
 
             <li>
               <AppealCard
-                numberOfAppeal={"221627"}
+                url={`/appeals/221625`}
+                numberOfAppeal={"221625"}
                 status={"Yangi"}
                 title={
                   "Fargona viloyat Uzbekiston tumani 15-sonli umumiy urta taʼlim maktabi binosini joriy tamirlash"
@@ -56,7 +60,8 @@ const Index = () => {
 
             <li>
               <AppealCard
-                numberOfAppeal={"221627"}
+                url={`/appeals/221624`}
+                numberOfAppeal={"221624"}
                 status={"Yangi"}
                 title={
                   "Fargona viloyat Uzbekiston tumani 15-sonli umumiy urta taʼlim maktabi binosini joriy tamirlash"
