@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AppealCard from "@/components/appeal-card";
+import Dashboard from "@/layouts/dashboard";
+import SearchBar from "@/components/search/sidebar-search";
 
 const Index = () => {
   return (
