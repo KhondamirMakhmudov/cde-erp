@@ -90,6 +90,7 @@ const Sidebar = () => {
                 alt="logo"
                 width={15}
                 height={18}
+                layout="intrinsic"
               />
               <p>{get(item, "title")}</p>
             </Link>

@@ -116,16 +116,9 @@ const Index = () => {
                 </button>
               </div>
 
-              <div className="py-[8px]">
-                <h2 className="text-[24px] font-medium mb-[4px]">Yanvar</h2>
-                <p className="text-sm text-[#8C8C8C]">
-                  Oylar bo&apos;yicha murojaatlar kelishi miqdori
-                </p>
-              </div>
-
-              {/* <div>
+              <div>
                 <Calendar appeals={appealsData} />
-              </div> */}
+              </div>
             </div>
 
             <div className="col-span-2  mt-[12px]">

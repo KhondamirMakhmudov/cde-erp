@@ -23,6 +23,7 @@ const AppealCard = ({
                 alt="appeal_file"
                 width={16}
                 height={16}
+                layout="intrinsic"
               />
 
               <p>

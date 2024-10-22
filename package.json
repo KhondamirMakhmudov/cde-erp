@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
     "framer-motion": "^11.5.4",
     "lodash": "^4.17.21",
